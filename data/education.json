@@ -1,0 +1,19 @@
+{
+  "degrees": [
+    {
+      "degree": "Bachelor of Computer Engineering",
+      "school": "Yanbu Industrial College",
+      "location": "Yanbu, Saudi Arabia",
+      "start": "2019-09",
+      "end": "2023-12",
+      "gpa": "3.17 / 4"
+    }
+  ],
+  "bootcamps": [
+    {
+      "name": "Tuwaiq Network & Automation Bootcamp",
+      "start": "2024-01",
+      "end": "2024-04"
+    }
+  ]
+}

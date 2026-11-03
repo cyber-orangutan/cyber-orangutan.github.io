@@ -1,0 +1,166 @@
+/* Windows, title bars, buttons and group boxes come from XP.css.
+   This file adds only layout, the wallpaper, the taskbar and the Start menu.
+   Windows XP desktop with a Frutiger Aero wallpaper.
+   Layout: one column of XP windows over a fixed wallpaper, with a taskbar along the bottom. */
+:root{
+  color-scheme:light;
+  --luna:#0A54E0; --luna-deep:#0831B8; --luna-light:#3C93FF;
+  --cream:#ECE9D8; --cream-line:#ACA899; --paper:#FFFFFF;
+  --ink:#14233F; --muted:#4A5874; --link:#0046D5;
+  --green:#3C9A3C; --hover:#F7B23B;
+  --ui:Tahoma,"Segoe UI",Verdana,Geneva,"Noto Sans",sans-serif;
+  --display:"Trebuchet MS","Segoe UI",Tahoma,"Noto Sans",sans-serif;
+  --mono:"Lucida Console",Consolas,"DejaVu Sans Mono",monospace;
+  --bar:44px;
+}
+*{box-sizing:border-box}
+/* Keep button text black when a device uses dark mode */
+button{color:#000}
+html{scroll-behavior:smooth;scroll-padding-top:14px}
+body{margin:0;font:15px/1.55 var(--ui);color:var(--ink);background:#1E7FEF}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:#1E7FEF url(../img/wallpaper.jpg) center/cover no-repeat}
+img{max-width:100%;display:block}
+a{color:var(--link)}
+h1,h2,h3,p,ul,dl,dd,figure{margin:0;padding:0}
+ul{list-style:none}
+[hidden]{display:none!important}
+:focus-visible{outline:2px dotted #111;outline-offset:2px}
+.title-bar :focus-visible,.taskbar :focus-visible,.startmenu :focus-visible{outline-color:#fff}
+.skip{position:fixed;left:8px;top:-60px;z-index:50;padding:8px 14px;background:#fff;border-radius:4px}
+.skip:focus{top:8px}
+.ico{width:22px;height:22px;flex:none}
+.ico-lg{width:32px;height:32px}
+.sprite{position:absolute;width:0;height:0}
+
+/* desk */
+.desk{max-width:1000px;margin:0 auto;padding:clamp(12px,3vw,32px) max(12px,env(safe-area-inset-left,0px)) calc(var(--bar) + 28px + env(safe-area-inset-bottom,0px));padding-right:max(12px,env(safe-area-inset-right,0px));display:grid;gap:22px}
+.stack{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+
+/* XP.css fixes */
+.window{min-width:0;display:flex;flex-direction:column;box-shadow:inset -1px -1px #00138c,inset 1px 1px #0831d9,inset -2px -2px #001ea0,inset 2px 2px #166aee,inset -3px -3px #003bda,inset 3px 3px #0855dd,0 8px 24px #06257a59}
+.window-body{flex:1;margin:0;padding:14px 12px 12px;font-size:13.5px;line-height:1.5;color:var(--ink)}
+.window.is-min .window-body{display:none}
+.title-bar{font-family:"Trebuchet MS","Segoe UI",Tahoma,"Noto Sans",sans-serif}
+.title-bar-text{display:flex;align-items:center;gap:6px;min-width:0;margin-right:8px;font-size:14px}
+.title-bar-text h2{margin:0;font:inherit}
+.title-bar .ico{width:18px;height:18px}
+.stack>.window{grid-column:1/-1}
+.stack>.window.half{grid-column:auto}
+
+/* welcome */
+.welcome{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px 24px;align-items:start}
+.portrait{padding:4px;background:#fff;border:1px solid #7F9DB9;border-radius:4px;box-shadow:0 3px 10px #0b3fb040}
+.portrait img{width:168px;height:192px;object-fit:cover;object-position:50% 20%;border-radius:2px}
+h1{margin:0;font:700 clamp(27px,5vw,38px)/1.1 var(--display);color:#0B3FB0;text-wrap:balance}
+.role{margin-top:6px;font:700 19px/1.3 var(--display);color:var(--ink)}
+.place{color:var(--muted)}
+.summary{margin-top:10px;max-width:60ch}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.chips{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;padding-top:12px;border-top:1px solid var(--cream-line)}
+.chips a{display:block;padding:3px 10px;border:1px solid #003C74;border-radius:3px;font-size:12.5px;color:var(--ink);text-decoration:none;background:linear-gradient(180deg,#fff,#ecebe5 86%,#d8d0c4)}
+.chips a:hover{border-color:var(--hover)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;min-width:75px;min-height:23px;padding:0 12px;border:1px solid #003c74;border-radius:3px;font-family:"Pixelated MS Sans Serif",Arial;font-size:11px;-webkit-font-smoothing:antialiased;color:#000;text-decoration:none;background:linear-gradient(180deg,#fff,#ecebe5 86%,#d8d0c4)}
+.btn:hover{box-shadow:inset -1px 1px #fff0cf,inset 1px 2px #fdd889,inset -2px 2px #fbc761,inset 2px -2px #e5a01a}
+
+/* experience */
+.jobs{display:grid;gap:14px}
+.box{padding:11px 13px;background:var(--paper);border:1px solid #d0d0bf;border-radius:4px}
+.job-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:0 16px}
+.box h3{margin:0;font:700 15px/1.3 var(--display);color:#0B3FB0}
+.when{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.org{color:var(--muted)}
+.job ul{margin-top:8px;display:grid;gap:3px;padding-left:18px;list-style:square}
+.job li::marker{color:var(--luna)}
+
+/* certificates */
+.certs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cert{display:flex;flex-direction:column;gap:2px}
+.cert .ico{margin-bottom:6px}
+.cert .meta{color:var(--muted);font-size:14px}
+.cert .cid{margin-top:5px;font-size:13px;color:var(--muted)}
+.cert code{display:block;font:12.5px/1.4 var(--mono);color:var(--ink);overflow-wrap:anywhere}
+.cert-links{margin-top:auto;padding-top:10px;display:flex;flex-wrap:wrap;gap:6px}
+
+/* skills */
+.groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+fieldset.group{min-width:0}
+.group legend{display:flex;align-items:center;gap:6px;padding:0 6px;font-weight:700}
+.group ul{display:grid;gap:3px}
+
+/* education and contact */
+.props{display:grid;grid-template-columns:auto minmax(0,1fr);gap:3px 14px;margin-top:6px}
+.props dt{color:var(--muted)}
+.contact{display:grid;gap:12px}
+.contact-row{display:flex;gap:10px;align-items:center;min-width:0}
+.contact-row p{min-width:0;overflow-wrap:anywhere}
+.contact-row strong{display:block;font-size:13px;font-weight:400;color:var(--muted)}
+.stack-gap{display:grid;gap:12px}
+
+/* projects and videos, hidden until switched on */
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.tags li{padding:1px 9px;border:1px solid #B9CFEA;border-radius:10px;font-size:13px;background:#EEF5FD}
+.thumb{position:relative;display:block;width:100%;padding:0;border:0;aspect-ratio:16/9;background:#0B3FB0;cursor:pointer;border-radius:3px;overflow:hidden}
+.thumb img{width:100%;height:100%;object-fit:cover}
+.thumb svg{position:absolute;inset:0;margin:auto;width:56px;height:56px}
+.frame{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:3px}
+.notice{padding:12px;background:#FFFFE1;border:1px solid #000}
+
+/* taskbar */
+.taskbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;align-items:stretch;height:calc(var(--bar) + env(safe-area-inset-bottom,0px));padding-bottom:env(safe-area-inset-bottom,0px);padding-right:env(safe-area-inset-right,0px);background:linear-gradient(180deg,#3F8CF3 0,#245EDC 6%,#2663E0 45%,#1C50C7 90%,#1941A5 100%);box-shadow:0 -1px 0 #ffffff55 inset}
+.start{position:relative;display:flex;align-items:center;gap:7px;padding:0 22px 0 12px;border:0;border-radius:0 12px 12px 0;cursor:pointer;font:italic 700 19px/1 var(--display);color:#fff;text-shadow:1px 1px 2px #145214;background:linear-gradient(180deg,#8FD97A 0,#3C9A3C 12%,#3A9A3A 55%,#2F8A2F 90%,#256E25 100%);box-shadow:inset -2px 0 3px #145214aa,inset 0 1px 0 #ffffff70}
+.start:hover,.start[aria-expanded="true"]{filter:brightness(1.1)}
+.orb{width:20px;height:20px;border-radius:50%;background:radial-gradient(circle at 34% 28%,#fff 0 12%,#BFF3FF 22%,#2FB4E4 58%,#0B62C4);box-shadow:0 0 0 1px #ffffff90}
+.tasks{flex:1;min-width:0;display:flex;align-items:center;gap:3px;padding:0 8px;overflow:hidden}
+.task{flex:0 1 140px;min-width:0;display:flex;align-items:center;gap:6px;height:32px;padding:0 9px;border-radius:3px;font-size:13.5px;color:#fff;text-decoration:none;white-space:nowrap;background:linear-gradient(#5C96F2,#3C74E6);box-shadow:inset 0 1px 0 #ffffff50}
+.task span{overflow:hidden;text-overflow:ellipsis}
+.task:hover{filter:brightness(1.12)}
+.task.is-active{background:linear-gradient(#1C50C7,#2A62E0);box-shadow:inset 1px 1px 3px #0a2a7a}
+.tray{display:flex;align-items:center;gap:6px;padding:0 13px;font-size:13.5px;color:#fff;white-space:nowrap;background:linear-gradient(180deg,#25AEF0 0,#1190E2 12%,#1590E0 85%,#0D74C8 100%);box-shadow:inset 1px 0 1px #0a3a8a}
+
+/* start menu */
+.startmenu{position:fixed;left:0;bottom:calc(var(--bar) + env(safe-area-inset-bottom,0px));z-index:30;width:min(420px,100vw);border-radius:8px 8px 0 0;overflow:hidden;background:#fff;box-shadow:3px -3px 16px #06257a80;border:1px solid var(--luna-deep)}
+.sm-head{display:flex;align-items:center;gap:10px;padding:10px 12px;background:linear-gradient(180deg,#1868CE,#0E60CB 12%,#2A7BE4);color:#fff}
+.sm-head strong{display:block;font:700 16px/1.25 var(--display)}
+.sm-head span{font-size:13.5px}
+.sm-photo{width:48px;height:48px;object-fit:cover;object-position:50% 20%;border:2px solid #fff;border-radius:4px}
+.sm-body{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)}
+.sm-left,.sm-right{display:grid;align-content:start;gap:1px;padding:8px}
+.sm-right{background:#D3E5FA;border-left:1px solid #9DC0EE}
+.sm-link{display:flex;align-items:center;gap:9px;padding:6px 8px;border-radius:3px;color:var(--ink);text-decoration:none;font-size:14.5px}
+.sm-link:hover,.sm-link:focus-visible{background:#2F71CD;color:#fff}
+
+/* certificate viewer */
+.viewer{width:min(880px,calc(100vw - 24px));padding:0 0 3px;border:0}
+.viewer:not([open]){display:none}
+.viewer::backdrop{background:#06257a99}
+.viewer .window-body{padding:6px}
+.viewer img{width:100%;height:auto;background:#fff}
+
+@media (max-width:1000px){
+  .tasks{visibility:hidden}
+  .certs{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (orientation:portrait){
+  body::before{background-image:url(../img/wallpaper-phone.jpg)}
+}
+@media (max-width:720px){
+  .stack>.window.half{grid-column:1/-1}
+  .groups,.grid2,.certs{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){
+  .welcome{grid-template-columns:minmax(0,1fr)}
+  .portrait{justify-self:center}
+  .portrait img{width:150px;height:171px}
+  .welcome-text{text-align:center}
+  .actions{justify-content:center}
+  .chips{justify-content:center}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media print{
+  body::before,.taskbar,.startmenu,.title-bar-controls{display:none!important}
+  body{background:#fff}.desk{padding:0;max-width:none}.window{box-shadow:none;background:none;padding:0}
+  .title-bar{background:none;border:0}.title-bar-text{color:#000;text-shadow:none}.window-body{background:none}
+}

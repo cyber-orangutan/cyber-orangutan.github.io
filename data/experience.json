@@ -1,0 +1,28 @@
+[
+  {
+    "role": "Computer Engineer",
+    "company": "Shabakkat KSA-Zain Project",
+    "location": "Yanbu, Saudi Arabia",
+    "start": "2024-11",
+    "end": "2026-09",
+    "duties": [
+      "Maintained over 200 sites across the Al Madinah region, carrying out telecom and Sceco inspections",
+      "Measuring readings from ACDB, rectifier and HVAC equipment",
+      "Writing reports"
+    ]
+  },
+  {
+    "role": "IT Specialist Trainee",
+    "company": "Royal Commission at Yanbu",
+    "location": "Yanbu, Saudi Arabia",
+    "start": "2023-06",
+    "end": "2023-11",
+    "duties": [
+      "Configuring network devices",
+      "Hardware troubleshooting",
+      "Creating virtual servers and machines",
+      "Installing new software",
+      "Help desk support"
+    ]
+  }
+]

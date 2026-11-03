@@ -1,0 +1,17 @@
+[
+  {
+    "group": "Networking",
+    "icon": "network",
+    "items": ["LAN", "TCP/IP", "VLAN configurations", "DHCP"]
+  },
+  {
+    "group": "Servers and virtualization",
+    "icon": "server",
+    "items": ["Windows Server", "Active Directory", "Hyper-V", "VMware"]
+  },
+  {
+    "group": "Support and hardware",
+    "icon": "tools",
+    "items": ["Troubleshooting", "Hardware installation", "Printer setup", "Data backup and recovery"]
+  }
+]

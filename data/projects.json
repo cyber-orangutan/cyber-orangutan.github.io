@@ -1,0 +1,29 @@
+[
+  {
+    "title": "RCY COOP Lab",
+    "start": "2023-11",
+    "end": "2023-11",
+    "description": "Created a lab for trainees in the network section of RCY.",
+    "tags": ["Networking", "Training"],
+    "link": "",
+    "image": ""
+  },
+  {
+    "title": "The Golden Future",
+    "start": "2022-11",
+    "end": "2022-12",
+    "description": "Simulated network design. Built the network infrastructure in Cisco Packet Tracer.",
+    "tags": ["Packet Tracer", "Network design"],
+    "link": "",
+    "image": ""
+  },
+  {
+    "title": "Rotary Dining Table",
+    "start": "2022-05",
+    "end": "2022-05",
+    "description": "Built a rotary table using an Arduino Uno and a DC motor.",
+    "tags": ["Arduino", "Hardware"],
+    "link": "",
+    "image": ""
+  }
+]

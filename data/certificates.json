@@ -1,0 +1,69 @@
+[
+  {
+    "name": "CCNA",
+    "fullName": "Cisco Certified Network Associate",
+    "issuer": "Cisco",
+    "issued": "2026-10",
+    "expires": "2029-10",
+    "idLabel": "Cisco ID",
+    "id": "CSCO14503619",
+    "verifyUrl": "https://www.credly.com/badges/8b150f9a-be9c-49ee-86f7-9f2c38d84272/public_url",
+    "image": "assets/certificates/ccna.jpg"
+  },
+  {
+    "name": "CompTIA Network+",
+    "fullName": "CompTIA Network+ ce",
+    "issuer": "CompTIA",
+    "issued": "2025-10",
+    "expires": "2028-10",
+    "idLabel": "Credential ID",
+    "id": "Z3KM82K58JFESENJ",
+    "verifyUrl": "https://www.credly.com/badges/a586e5f2-de60-4384-ba02-4bfc5c2595cf/public_url",
+    "image": "assets/certificates/network-plus.jpg"
+  },
+  {
+    "name": "JNCIA-Junos",
+    "fullName": "Juniper Networks Certified Associate, Junos",
+    "issuer": "Juniper Networks",
+    "issued": "2024-05",
+    "expires": "2027-05",
+    "idLabel": "Credential ID",
+    "id": "RY41P6P59N411054",
+    "verifyUrl": "https://www.credly.com/badges/540c022a-819d-47de-9357-4b08f5675693",
+    "image": "assets/certificates/jncia-junos.jpg"
+  },
+  {
+    "name": "Google IT Support",
+    "fullName": "Google IT Support Professional Certificate",
+    "issuer": "Google",
+    "issued": "2026-07",
+    "expires": "",
+    "idLabel": "Credential ID",
+    "id": "IDLX8KDPYRAI",
+    "verifyUrl": "https://www.credly.com/badges/04ca66d0-ae6e-430a-a3b1-f4b6ad6013a7/public_url",
+    "image": "assets/certificates/google-it-support.jpg"
+  },
+  {
+    "name": "STEP",
+    "fullName": "Standardized Test of English Proficiency",
+    "issuer": "Qiyas",
+    "issued": "2024-07",
+    "expires": "2026-07",
+    "grade": "73",
+    "idLabel": "",
+    "id": "",
+    "verifyUrl": "",
+    "image": ""
+  },
+  {
+    "name": "Member of the SCE",
+    "fullName": "",
+    "issuer": "",
+    "issued": "",
+    "expires": "",
+    "idLabel": "ID",
+    "id": "1085058",
+    "verifyUrl": "",
+    "image": ""
+  }
+]

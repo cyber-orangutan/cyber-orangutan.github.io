@@ -1,0 +1,29 @@
+{
+  "profile": {
+    "name": "Ziad Ahmed Alamri",
+    "shortName": "Ziad Alamri",
+    "initials": "ZA",
+    "title": "Computer Engineer",
+    "focus": "IT support, networking and systems",
+    "location": "Riyadh, Saudi Arabia",
+    "summary": "Computer engineer with hands-on experience in hardware, operating systems and networking. I hold CCNA, CompTIA Network+, JNCIA-Junos and Google IT Support certifications.",
+    "languages": [
+      "Arabic",
+      "English"
+    ],
+    "email": "zi391ad@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/ziad-alamri-228656259",
+    "linkedinLabel": "linkedin.com/in/ziad-alamri-228656259",
+    "cv": "assets/cv/Ziad-Alamri-CV.pdf",
+    "photo": "assets/img/ziad-alamri.jpg"
+  },
+  "sections": {
+    "experience": true,
+    "certificates": true,
+    "skills": true,
+    "projects": false,
+    "videos": false,
+    "education": true,
+    "contact": true
+  }
+}
